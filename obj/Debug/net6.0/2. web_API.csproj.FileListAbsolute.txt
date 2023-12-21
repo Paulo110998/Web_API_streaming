@@ -1,0 +1,49 @@
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\bin\Debug\net6.0\appsettings.json
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\bin\Debug\net6.0\2. web_API.exe
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\bin\Debug\net6.0\2. web_API.deps.json
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\bin\Debug\net6.0\2. web_API.runtimeconfig.json
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\bin\Debug\net6.0\2. web_API.dll
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\bin\Debug\net6.0\2. web_API.pdb
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\obj\Debug\net6.0\2. web_API.csproj.AssemblyReference.cache
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\obj\Debug\net6.0\2. web_API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\obj\Debug\net6.0\2. web_API.AssemblyInfoInputs.cache
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\obj\Debug\net6.0\2. web_API.AssemblyInfo.cs
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\obj\Debug\net6.0\2. web_API.csproj.CoreCompileInputs.cache
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\obj\Debug\net6.0\2. web_API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\obj\Debug\net6.0\2. web_API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\obj\Debug\net6.0\staticwebassets\msbuild.2. web_API.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\obj\Debug\net6.0\staticwebassets\msbuild.build.2. web_API.props
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.2. web_API.props
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.2. web_API.props
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\obj\Debug\net6.0\scopedcss\bundle\2. web_API.styles.css
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\obj\Debug\net6.0\2. web_API.csproj.CopyComplete
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\obj\Debug\net6.0\2. web_API.dll
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\obj\Debug\net6.0\refint\2. web_API.dll
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\obj\Debug\net6.0\2. web_API.pdb
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\obj\Debug\net6.0\2. web_API.genruntimeconfig.cache
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\obj\Debug\net6.0\ref\2. web_API.dll
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\bin\Debug\net6.0\Humanizer.dll
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\bin\Debug\net6.0\MySqlConnector.dll
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\bin\Debug\net6.0\2. web_API.xml
+C:\Users\canto\OneDrive\Área de Trabalho\Curso - Asp.NET Core\2. web_API\obj\Debug\net6.0\2. web_API.xml
