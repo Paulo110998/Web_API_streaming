@@ -23,6 +23,7 @@ public class SeriesController : ControllerBase
     }
 
     [HttpPost]
+    [ProducesResponseType(StatusCodes.Status201Created)]
     public IActionResult AdicionarSerie([FromBody] CreateSeriesDto seriesDto)
     {
         Series serie = _mapper.Map<Series>(seriesDto);
@@ -33,10 +34,11 @@ public class SeriesController : ControllerBase
     }
 
     [HttpGet]
-    public IEnumerable<Series> GetSeries([FromQuery] int skip = 0, int take = 5) 
+    public IEnumerable<ReadSeriesDto> GetSeries([FromQuery] int skip = 0, int take = 5) 
     {
-        return _context.Seriess.Skip(skip).Take(take);
-
+        return _mapper.Map<List<ReadSeriesDto>>(
+            _context.Seriess.Skip(skip).Take(take));
+        
     }
 
     [HttpGet("{id}")]
@@ -44,6 +46,7 @@ public class SeriesController : ControllerBase
     {
         var serie = _context.Seriess.FirstOrDefault(serie => serie.Id == id);
         if (serie == null) return NotFound();
+        var serieDto = _mapper.Map<ReadSeriesDto>(serie);
         return Ok(serie);
     }
 
@@ -79,7 +82,19 @@ public class SeriesController : ControllerBase
         _context.SaveChanges();
         return NoContent();
     }
-   
+
+
+    [HttpDelete("{id}")]
+    public IActionResult DeleteSerie(int id)
+    {
+        var serie = _context.Seriess.FirstOrDefault(
+            serie => serie.Id == id);
+        if (serie == null) return NotFound();
+
+        _context.Remove(serie);
+        _context.SaveChanges();
+        return NoContent();
+    }
 
 
 }

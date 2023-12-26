@@ -21,8 +21,14 @@ public class GenerosController : ControllerBase
     }
 
     
-
+    /// <summary>
+    /// Adiciona gênero
+    /// </summary>
+    /// <param name="generoDto">Objetos com campos necessários</param>
+    /// <returns>IActionResult</returns>
+    /// <response code="201">Caso a inserção seja feita com sucesso.</response>
     [HttpPost]
+    [ProducesResponseType(StatusCodes.Status201Created)]
     public IActionResult AdicionarGenero([FromBody] CreateGeneroDto generoDto)
     {
         Genero genero = _mapper.Map<Genero>(generoDto);
@@ -33,10 +39,11 @@ public class GenerosController : ControllerBase
     }
 
     [HttpGet]
-    public IEnumerable<Genero> GetGeneros([FromQuery] int skip = 0,
+    public IEnumerable<ReadGeneroDto> GetGeneros([FromQuery] int skip = 0,
         int take = 20)
     {
-        return _context.Generos.Skip(skip).Take(take);
+        return _mapper.Map<List<ReadGeneroDto>>(_context.Generos.Skip(skip).Take(take));
+        
     }
 
     [HttpGet("{id}")]
@@ -44,6 +51,7 @@ public class GenerosController : ControllerBase
     {
         var genero = _context.Generos.FirstOrDefault(genero => genero.Id == id);
         if (genero == null) return NotFound();
+        var generoDto = _mapper.Map<ReadGeneroDto>(genero);
         return Ok(genero);
     }
 
@@ -76,6 +84,18 @@ public class GenerosController : ControllerBase
             return ValidationProblem(ModelState);
         }
         _mapper.Map(generoAtualizar, genero);
+        _context.SaveChanges();
+        return NoContent();
+    }
+
+    [HttpDelete("{id}")]
+    public IActionResult DeletarGenero(int id)
+    {
+        var genero = _context.Generos.FirstOrDefault(
+            genero => genero.Id == id);
+        if (genero == null) return NotFound();
+
+        _context.Remove(genero);
         _context.SaveChanges();
         return NoContent();
     }

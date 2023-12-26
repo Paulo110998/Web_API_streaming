@@ -8,9 +8,16 @@ public class GeneroProfile : Profile
 {
     public GeneroProfile() 
     {
+        // Mapeando um Dto para um Model (POST)
         CreateMap<CreateGeneroDto, Genero>();
+
+        // Mapeando um Dto para um Model (PUT)
         CreateMap<UpdateGeneroDto, Genero>();
 
+        // Mapeando um Dto para um Model (PATCH)
         CreateMap<Genero,UpdateGeneroDto>();
+
+        // Mapeando um Dto para consulta (READ)
+        CreateMap<Genero, ReadGeneroDto>();
     }
 }

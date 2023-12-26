@@ -11,5 +11,9 @@ public class SeriesProfile : Profile
         CreateMap<CreateSeriesDto, Series>();  
         
         CreateMap<UpdateSeriesDto, Series>();
+
+        CreateMap<Series, UpdateSeriesDto>();
+
+        CreateMap<Series, ReadSeriesDto>();
    }
 }

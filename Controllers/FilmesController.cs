@@ -51,7 +51,8 @@ public class FilmesController : ControllerBase
         int take = 50) 
     {
         // Atualizando a consulta de todos os objetos com ReadFilmeDto
-        return _mapper.Map<List<ReadFilmeDto>>(_context.Filmes.Skip(skip).Take(take));   
+        return _mapper.Map<List<ReadFilmeDto>>(
+            _context.Filmes.Skip(skip).Take(take));   
     }
 
     // Exibindo filmes por id

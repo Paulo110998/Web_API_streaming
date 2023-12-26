@@ -12,6 +12,10 @@ namespace _2._web_API.Profiles
 
             CreateMap<UpdateUsuariosDto, Usuario>();
 
+            CreateMap<Usuario, UpdateUsuariosDto>();
+
+            CreateMap<Usuario, ReadUsuarioDto>();
+
         }
     }
 }

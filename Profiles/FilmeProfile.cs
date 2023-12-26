@@ -18,7 +18,7 @@ public class FilmeProfile : Profile // Herança profile
         // Mapeando um Dto para um Model (PATCH)
         CreateMap<Filme, UpdateFilmeDto>(); // Conversão reversa para o patch
 
-        // Mapeando um Dtio para consulta (READ)
+        // Mapeando um Dto para consulta (READ)
         CreateMap<Filme, ReadFilmeDto>();
 
 

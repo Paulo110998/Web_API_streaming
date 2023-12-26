@@ -22,6 +22,7 @@ public class ProgramaTvController : ControllerBase
     }
 
     [HttpPost]
+    [ProducesResponseType(StatusCodes.Status201Created)]
     public IActionResult AdicionarPrograma([FromBody] CreateProgramaTvDto programaDto)
     {
         ProgramaTv programa = _mapper.Map<ProgramaTv>(programaDto);
@@ -33,10 +34,11 @@ public class ProgramaTvController : ControllerBase
     }
 
     [HttpGet]
-    public IEnumerable<ProgramaTv> BuscarPrograma([FromQuery] int skip = 0,
+    public IEnumerable<ReadProgramaTvDto> BuscarPrograma([FromQuery] int skip = 0,
         int take = 50)
     {
-        return _context.ProgramaTv.Skip(skip).Take(take);
+        return  _mapper.Map<List<ReadProgramaTvDto>>(
+            _context.ProgramaTv.Skip(skip).Take(take));
     }
 
     [HttpGet("{id}")]
@@ -45,6 +47,7 @@ public class ProgramaTvController : ControllerBase
         var programa = _context.ProgramaTv.FirstOrDefault(programa
             => programa.Id == id);
         if(programa == null) return NotFound();
+        var programaDto = _mapper.Map<ReadProgramaTvDto>(programa);
         return Ok(programa);
     }
 
@@ -80,6 +83,18 @@ public class ProgramaTvController : ControllerBase
         _mapper.Map(programa, programaAtualizar);
         _context.SaveChanges();
         return NoContent();
+    }
+
+    [HttpDelete("{id}")]
+    public IActionResult DeletePrograma(int id)
+    {
+        var programa = _context.ProgramaTv.FirstOrDefault(
+            programa => programa.Id == id);
+        if (programa == null) return NotFound();
+
+        _context.Remove(programa);
+        _context.SaveChanges();
+        return NoContent(); 
     }
    
     

@@ -11,6 +11,10 @@ public class ProgramaTvProfile : Profile
         CreateMap<CreateProgramaTvDto, ProgramaTv>();
 
         CreateMap<UpdateProgramaTvDto, ProgramaTv>();
+
+        CreateMap<ProgramaTv, UpdateProgramaTvDto>();
+
+        CreateMap<ProgramaTv, ReadProgramaTvDto>();
      
     }
 
