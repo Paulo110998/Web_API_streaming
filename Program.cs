@@ -15,41 +15,40 @@ var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("FilmeConnection"); 
 
 builder.Services.AddDbContext<FilmeContext>(options => 
-options.UseMySql(connectionString, 
+options.UseLazyLoadingProxies().UseMySql(connectionString, 
 ServerVersion.AutoDetect(connectionString)));
 
 // Séries
 var connectionStringSeries = builder.Configuration.GetConnectionString("SeriesConnection");
 
 builder.Services.AddDbContext<SeriesContext>(options =>
-options.UseMySql(connectionStringSeries,
+options.UseLazyLoadingProxies().UseMySql(connectionStringSeries,
 ServerVersion.AutoDetect(connectionStringSeries)));
 
 // Generos
 var connectionStringGenero = builder.Configuration.GetConnectionString("GeneroConnection");
 
 builder.Services.AddDbContext<GeneroContext>(options_genero
-    => options_genero.UseMySql(connectionStringGenero, 
+    => options_genero.UseLazyLoadingProxies().UseMySql(connectionStringGenero, 
     ServerVersion.AutoDetect(connectionStringGenero)));
 
 // Usuarios
 var connectionStringUsuario = builder.Configuration.GetConnectionString("UsuariosConnection");
 
 builder.Services.AddDbContext<UsuariosContext>(options_users
-    => options_users.UseMySql(connectionStringUsuario, ServerVersion.AutoDetect(connectionStringUsuario)));
+    => options_users.UseLazyLoadingProxies().UseMySql(connectionStringUsuario, ServerVersion.AutoDetect(connectionStringUsuario)));
 
 
 // ProgramaTv
 var connectionStringTv = builder.Configuration.GetConnectionString("ProgramaTvConnection");
 
 builder.Services.AddDbContext<ProgramaTvContext>(options_tv
-    => options_tv.UseMySql(connectionStringTv, ServerVersion.AutoDetect(connectionStringTv)));
-
-
-
+    => options_tv.UseLazyLoadingProxies().UseMySql(connectionStringTv, ServerVersion.AutoDetect(connectionStringTv)));
 
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+
 
 // Add services to the container.
 
@@ -77,6 +76,12 @@ builder.Services.AddSwaggerGen(c =>
 
 
 var app = builder.Build();
+
+app.UseCors(builder => builder
+       .AllowAnyHeader()
+       .AllowAnyMethod()
+       .AllowAnyOrigin()
+    );
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

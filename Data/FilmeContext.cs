@@ -12,4 +12,10 @@ public class FilmeContext : DbContext
 
     // Propriedade de acesso aos filmes
     public DbSet<Filme> Filmes { get; set; }
+
+    public DbSet<Cinema> Cinemas { get; set; }
+
+    public DbSet<Endereco> Endereços { get; set; }
+
+    public DbSet<Sessao> Sessoes { get; set; }
 }   

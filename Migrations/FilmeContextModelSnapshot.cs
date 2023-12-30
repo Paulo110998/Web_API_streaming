@@ -18,6 +18,45 @@ namespace _2._web_API.Migrations
                 .HasAnnotation("ProductVersion", "6.0.10")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
+            modelBuilder.Entity("_2._web_API.Models.Cinema", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<int>("EnderecoId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EnderecoId")
+                        .IsUnique();
+
+                    b.ToTable("Cinemas");
+                });
+
+            modelBuilder.Entity("_2._web_API.Models.Endereco", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Logradouro")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("Numero")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Endereços");
+                });
+
             modelBuilder.Entity("_2._web_API.Models.Filme", b =>
                 {
                     b.Property<int>("Id")
@@ -39,6 +78,55 @@ namespace _2._web_API.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Filmes");
+                });
+
+            modelBuilder.Entity("_2._web_API.Models.Sessao", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<int>("FilmeId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("FilmeId");
+
+                    b.ToTable("Sessoes");
+                });
+
+            modelBuilder.Entity("_2._web_API.Models.Cinema", b =>
+                {
+                    b.HasOne("_2._web_API.Models.Endereco", "Endereco")
+                        .WithOne("Cinema")
+                        .HasForeignKey("_2._web_API.Models.Cinema", "EnderecoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Endereco");
+                });
+
+            modelBuilder.Entity("_2._web_API.Models.Sessao", b =>
+                {
+                    b.HasOne("_2._web_API.Models.Filme", "Filme")
+                        .WithMany("Sessoes")
+                        .HasForeignKey("FilmeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Filme");
+                });
+
+            modelBuilder.Entity("_2._web_API.Models.Endereco", b =>
+                {
+                    b.Navigation("Cinema")
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("_2._web_API.Models.Filme", b =>
+                {
+                    b.Navigation("Sessoes");
                 });
 #pragma warning restore 612, 618
         }

@@ -18,4 +18,7 @@ public class Filme
     [Required]
     [Range(70, 100, ErrorMessage ="O duração deve ter entre 70 e 100min")]
     public int Duracao { get; set; }
+
+    // Criando a relação do filme com uma sessão, através de uma coleção (lista) de sessões
+    public virtual ICollection<Sessao> Sessoes { get; set; }
 }

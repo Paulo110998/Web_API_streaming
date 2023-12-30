@@ -9,17 +9,22 @@ public class FilmeProfile : Profile // Herança profile
 {
     public FilmeProfile()
     {
-        // Mapeando um Dto para um Model (POST)
+        // Mapeando um Dto para um Model (CREATE)
         CreateMap<CreateFilmeDto, Filme>();
+
+        // Mapeando um Dto para consulta (READ)
+        CreateMap<Filme, ReadFilmeDto>()
+            .ForMember(filmeDto => filmeDto.ReadSessaoDto,
+            opt => opt.MapFrom(filme => filme.Sessoes));
 
         // Mapeando um Dto para um Model (PUT)
         CreateMap<UpdateFilmeDto, Filme>();
+            
 
         // Mapeando um Dto para um Model (PATCH)
         CreateMap<Filme, UpdateFilmeDto>(); // Conversão reversa para o patch
 
-        // Mapeando um Dto para consulta (READ)
-        CreateMap<Filme, ReadFilmeDto>();
+        
 
 
     }

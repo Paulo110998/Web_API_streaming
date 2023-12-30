@@ -12,4 +12,8 @@ public class UsuariosContext : DbContext
     }
 
     public DbSet<Usuario> Usuarios { get; set; }
+
+    public DbSet<Planos> Planos { get; set; }
+
+    public DbSet<Perfil> Perfis { get; set; }
 }

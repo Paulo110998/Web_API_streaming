@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace _2._web_API.Migrations.Genero
 {
-    public partial class GeneroTable : Migration
+    public partial class GeneroTabela : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

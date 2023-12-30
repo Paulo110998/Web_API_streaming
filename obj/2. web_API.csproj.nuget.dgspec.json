@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\canto\\OneDrive\\Área de Trabalho\\Curso - Asp.NET Core\\2. web_API\\2. web_API.csproj": {}
+    "C:\\Users\\canto\\OneDrive\\Área de Trabalho\\Curso - Asp.NET Core - Alura\\2. web_API\\2. web_API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\canto\\OneDrive\\Área de Trabalho\\Curso - Asp.NET Core\\2. web_API\\2. web_API.csproj": {
+    "C:\\Users\\canto\\OneDrive\\Área de Trabalho\\Curso - Asp.NET Core - Alura\\2. web_API\\2. web_API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\canto\\OneDrive\\Área de Trabalho\\Curso - Asp.NET Core\\2. web_API\\2. web_API.csproj",
+        "projectUniqueName": "C:\\Users\\canto\\OneDrive\\Área de Trabalho\\Curso - Asp.NET Core - Alura\\2. web_API\\2. web_API.csproj",
         "projectName": "2. web_API",
-        "projectPath": "C:\\Users\\canto\\OneDrive\\Área de Trabalho\\Curso - Asp.NET Core\\2. web_API\\2. web_API.csproj",
+        "projectPath": "C:\\Users\\canto\\OneDrive\\Área de Trabalho\\Curso - Asp.NET Core - Alura\\2. web_API\\2. web_API.csproj",
         "packagesPath": "C:\\Users\\canto\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\canto\\OneDrive\\Área de Trabalho\\Curso - Asp.NET Core\\2. web_API\\obj\\",
+        "outputPath": "C:\\Users\\canto\\OneDrive\\Área de Trabalho\\Curso - Asp.NET Core - Alura\\2. web_API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\canto\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,6 +53,10 @@
               "version": "[6.0.0, )"
             },
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Proxies": {
               "target": "Package",
               "version": "[6.0.10, )"
             },

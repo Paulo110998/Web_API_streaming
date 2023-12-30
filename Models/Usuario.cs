@@ -19,4 +19,6 @@ public class Usuario
     [Required(ErrorMessage = "Campo obrigatório")]
     [StringLength(10, ErrorMessage = "total de caracteres: 10")]
     public string Senha { get; set; }
+
+
 }

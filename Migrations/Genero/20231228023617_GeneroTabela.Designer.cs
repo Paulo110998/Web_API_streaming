@@ -10,8 +10,8 @@ using _2._web_API.Data;
 namespace _2._web_API.Migrations.Genero
 {
     [DbContext(typeof(GeneroContext))]
-    [Migration("20231205173257_GeneroTable")]
-    partial class GeneroTable
+    [Migration("20231228023617_GeneroTabela")]
+    partial class GeneroTabela
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

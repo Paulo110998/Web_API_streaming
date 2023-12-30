@@ -47,12 +47,11 @@ public class FilmesController : ControllerBase
     }
     // Exibindo a lista de filmes 
     [HttpGet]
-    public IEnumerable<ReadFilmeDto> ExibirFilmes([FromQuery] int skip = 0,
-        int take = 50) 
+    public IEnumerable<ReadFilmeDto> ExibirFilmes() 
     {
         // Atualizando a consulta de todos os objetos com ReadFilmeDto
         return _mapper.Map<List<ReadFilmeDto>>(
-            _context.Filmes.Skip(skip).Take(take));   
+            _context.Filmes.ToList());   
     }
 
     // Exibindo filmes por id

@@ -11,4 +11,5 @@ public class Genero
     [Required]
     [StringLength(100, ErrorMessage = "Total de caracteres: 100")]
     public string GeneroNome { get; set; }
+
 }

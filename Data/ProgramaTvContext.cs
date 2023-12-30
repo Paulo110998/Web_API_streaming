@@ -5,7 +5,7 @@ namespace _2._web_API.Data;
 
 public class ProgramaTvContext : DbContext
 {
-    public ProgramaTvContext(DbContextOptions options) 
+    public ProgramaTvContext(DbContextOptions<ProgramaTvContext> options) 
         : base(options)
     {
 

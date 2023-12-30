@@ -13,4 +13,6 @@ public class ReadFilmeDto
 
     // Adicionando DateTime na hora da consulta
     public DateTime HoraDaConsulta { get; set;} = DateTime.Now;
+
+    public ICollection<ReadSessaoDto> ReadSessaoDto { get; set; }
 }

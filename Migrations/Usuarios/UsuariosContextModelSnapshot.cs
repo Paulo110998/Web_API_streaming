@@ -18,6 +18,47 @@ namespace _2._web_API.Migrations.Usuarios
                 .HasAnnotation("ProductVersion", "6.0.10")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
+            modelBuilder.Entity("_2._web_API.Models.Perfil", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("NomeDoPerfil")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("varchar(30)");
+
+                    b.Property<int>("PlanosId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PlanosId")
+                        .IsUnique();
+
+                    b.ToTable("Perfis");
+                });
+
+            modelBuilder.Entity("_2._web_API.Models.Planos", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("NomePlano")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("ValorPlano")
+                        .HasMaxLength(3)
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Planos");
+                });
+
             modelBuilder.Entity("_2._web_API.Models.Usuario", b =>
                 {
                     b.Property<int>("Id")
@@ -42,6 +83,23 @@ namespace _2._web_API.Migrations.Usuarios
                     b.HasKey("Id");
 
                     b.ToTable("Usuarios");
+                });
+
+            modelBuilder.Entity("_2._web_API.Models.Perfil", b =>
+                {
+                    b.HasOne("_2._web_API.Models.Planos", "Planos")
+                        .WithOne("Perfil")
+                        .HasForeignKey("_2._web_API.Models.Perfil", "PlanosId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Planos");
+                });
+
+            modelBuilder.Entity("_2._web_API.Models.Planos", b =>
+                {
+                    b.Navigation("Perfil")
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }
