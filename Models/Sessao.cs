@@ -13,6 +13,10 @@ public class Sessao
     public int FilmeId { get; set; }
     public virtual Filme Filme { get; set; }
 
+    // Criando uma relação de uma sessão com um cinema
+    [Required]
+    public int CinemaId { get; set; }
+    public virtual Cinema Cinema {  get; set; }
 
 }
  

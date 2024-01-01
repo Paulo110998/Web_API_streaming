@@ -15,4 +15,7 @@ public class Cinema
     public int EnderecoId { get; set; }
 
     public virtual Endereco Endereco { get; set; }
+
+    // Relacionando com a entidade "Sessao"
+    public virtual ICollection<Sessao> Sessao { get; set; }
 }

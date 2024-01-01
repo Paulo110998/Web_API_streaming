@@ -12,7 +12,10 @@ public class CinemaProfile : Profile
 
         CreateMap<Cinema, ReadCinemaDto>()
            .ForMember(cinemaDto => cinemaDto.ReadEndereçoDto, 
-            opt => opt.MapFrom(cinema => cinema.Endereco));
+            opt => opt.MapFrom(cinema => cinema.Endereco))
+
+           .ForMember(cinemaDto => cinemaDto.ReadSessaoDto, 
+           opt => opt.MapFrom(cinema => cinema.Sessao));
 
         CreateMap<UpdateCinemaDto, Cinema>();
     }
