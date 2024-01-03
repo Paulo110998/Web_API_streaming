@@ -8,6 +8,9 @@ public class Filme
     [Required]
     public int Id { get; set; }
 
+    [Required]
+    public byte[] Imagem {  get; set; }
+
     [Required(ErrorMessage = "Campo 'Título' é obrigatório!")]
     [MaxLength(50, ErrorMessage ="Total de caracteres: 50")]
     public string Titulo { get; set; }

@@ -4,6 +4,8 @@ namespace _2._web_API.Data.Dtos;
 
 public class UpdateSeriesDto
 {
+    
+    public byte[]? ImagemSerie { get; set; }
 
     [Required(ErrorMessage = "Título da série é obrigatório!")]
     [StringLength(50, ErrorMessage = "Total de caracteres: 50")]

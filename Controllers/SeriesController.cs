@@ -34,10 +34,10 @@ public class SeriesController : ControllerBase
     }
 
     [HttpGet]
-    public IEnumerable<ReadSeriesDto> GetSeries([FromQuery] int skip = 0, int take = 5) 
+    public IEnumerable<ReadSeriesDto> GetSeries() 
     {
         return _mapper.Map<List<ReadSeriesDto>>(
-            _context.Seriess.Skip(skip).Take(take));
+            _context.Seriess.ToList());
         
     }
 

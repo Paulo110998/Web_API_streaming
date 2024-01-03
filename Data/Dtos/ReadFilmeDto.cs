@@ -1,10 +1,13 @@
 ﻿
 
+using System.ComponentModel.DataAnnotations;
+
 namespace _2._web_API.Data.Dtos;
 
 public class ReadFilmeDto
 {
     
+    public byte[] Imagem { get; set; }
     public string Titulo { get; set; }
  
     public string Genero { get; set; }

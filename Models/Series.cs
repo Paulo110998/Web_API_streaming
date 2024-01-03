@@ -8,6 +8,10 @@ public class Series
     [Required]
     public int Id { get; set; }
 
+    [Required]
+    public byte[] ImagemSerie { get; set; }
+
+
     [Required(ErrorMessage = "Título da série é obrigatório!")]
     [StringLength(50, ErrorMessage = "Total de caracteres: 50")]
     public string TituloSerie { get; set; }

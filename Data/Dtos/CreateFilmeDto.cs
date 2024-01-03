@@ -4,7 +4,9 @@ namespace _2._web_API.Data.Dtos;
 
 public class CreateFilmeDto
 {
-   
+    [Required]
+    public byte[] Imagem { get; set; }
+
     [Required(ErrorMessage = "Campo 'Título' é obrigatório!")]
     [StringLength(50, ErrorMessage = "Total de caracteres: 50")]
     public string Titulo { get; set; }

@@ -4,6 +4,9 @@ namespace _2._web_API.Data.Dtos;
 
 public class CreateSeriesDto
 {
+    
+    public byte[]? ImagemSerie { get; set; }
+    
 
     [Required(ErrorMessage = "Título da série é obrigatório!")]
     [StringLength(50, ErrorMessage = "Total de caracteres: 50")]
